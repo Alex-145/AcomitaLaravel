@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('name');
+            $table->string('name');
             $table->text('desciptions');
-            $table->dateTime('datatime');
-            $table->dateTime('status');
+            $table->date('datatime');
+            $table->enum('status',['realizado','pendiente']);
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
