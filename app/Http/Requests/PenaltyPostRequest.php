@@ -24,7 +24,10 @@ class PenaltyPostRequest extends FormRequest
     public function rules()
     {
         return [
-            'amount'=>"re",
+            'amount'=>"required",
+            'datatime'=>"required",
+            'amount'=>"required",
+            'amount'=>"required",
         ];
     }
 }
