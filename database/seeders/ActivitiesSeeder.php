@@ -40,7 +40,7 @@ class ActivitiesSeeder extends Seeder
 
         ]);
         Activity::create([
-            'name'=>'Actividad Julio',
+            'name'=>'Actividad Julios',
             'desciptions'=>'At vero eos et landitiis praesentium voluptatum deleniti atque corrupti quos dolores.',
             'datatime'=>'2000-01-01 ',
             'status'=>'pendiente',
