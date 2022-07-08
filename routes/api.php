@@ -4,6 +4,7 @@ use App\Http\Controllers\PenaltyController;
 use App\Http\Controllers\SonController;
 use App\Models\Penalty;
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,11 @@ Route::apiResource('activity',ActivityController::class);
 Route::apiResource('penalty', PenaltyController::class);
 Route::apiResource('menbers', MenberController::class);
 Route::apiResource('sons', SonController::class);
+
+Route::group(['middleware' => 'api','prefix' => 'auth'], function ($router) {
+    Route::post('login',[AuthController::class,'login']);
+    Route::post('logout',[AuthController::class,'logout']);
+    Route::post('refresh',[AuthController::class,'refresh']);
+    Route::post('register',[AuthController::class,'register']);
+    Route::get('me',[AuthController::class,'me']);
+});
