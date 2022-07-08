@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('status');
             $table->string('observations');
-            $table->unsignedBigInteger('menber_id');
-            $table->foreign('menber_id')->references('id')->on('menbers')->onDelete('cascade');
             $table->timestamps();
         });
     }

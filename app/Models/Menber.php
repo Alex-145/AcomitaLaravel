@@ -26,9 +26,6 @@ class Menber extends Model
     public function spouse(){
         return $this->hasOne(Spouse::class);
     }
-    public function stands(){
-        return $this->hasMany(Stand::class);
-    }
     public function attendances(){
         return $this->hasMany(Attendance::class);
     }

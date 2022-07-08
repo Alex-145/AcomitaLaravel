@@ -8,10 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Stand extends Model
 {
     use HasFactory;
-    public function menber(){
-        return $this->belongsTo(Menber::class);
-    }
-
+    protected $guarded=['id'];
     public function sanctions(){
         return $this->hasMany(Sanction::class);
     }
