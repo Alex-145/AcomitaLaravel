@@ -15,9 +15,8 @@ return new class extends Migration
     {
         Schema::create('periods', function (Blueprint $table) {
             $table->id();
-            $table->date('dateinit');
-            $table->date('dateout');
-            $table->date('daterecord');
+            $table->string('dateinit');
+            $table->string('dateout');
             $table->text('observations');
             $table->string('status');
             $table->timestamps();

@@ -9,6 +9,7 @@ class Period extends Model
 {
     use HasFactory;
 
+    protected $guarded=['id'];
     public function managements(){
         return $this->hasMany(Management::class);
     }
